@@ -1,29 +1,54 @@
 require("lazy").setup({
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
-    {'windwp/nvim-autopairs', event = "InsertEnter", config = true },
+    { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,  opts = ... },
+    { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
+
+
+    { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
 
     'nvim-treesitter/nvim-treesitter',
+    'nvim-lua/plenary.nvim',
 
--- COMPLETION
+
+    { 'timtro/glslView-nvim', ft = 'glsl' },
+
+    { 'ThePrimeagen/harpoon', branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
+
+    { 'ibhagwan/fzf-lua' },
+
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
+
+    --Godot Things
+    { 'habamax/vim-godot',             lazy = false },
+
+    -- COMPLETION
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
 
--- Snippets
+    -- Snippets
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
 
--- LSP SHIT
+    -- LSP SHIT
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
 
--- NVIM BUILT IN LSP
+    -- NVIM BUILT IN LSP
     'neovim/nvim-lspconfig',
 
-    {
-        "nvim-telescope/telescope.nvim", tag = "0.1.4",
-        dependencies = { "nvim-lua/plenary.nvim" }
-    }
+    { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 
 })
