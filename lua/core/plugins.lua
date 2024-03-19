@@ -1,10 +1,10 @@
 require("lazy").setup({
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,  opts = ... },
-    { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,  opts = ... },
+    { "catppuccin/nvim", name = "catppuccin",   priority = 1000 },
 
 
-    { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
+    { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
 
     'nvim-treesitter/nvim-treesitter',
     'nvim-lua/plenary.nvim',
@@ -31,7 +31,8 @@ require("lazy").setup({
     },
 
     --Godot Things
-    { 'habamax/vim-godot',             lazy = false },
+    { 'habamax/vim-godot', lazy = false },
+    --WSL Godot LspServer middleware
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
