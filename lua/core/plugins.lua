@@ -46,11 +46,7 @@ require("lazy").setup({
     'lewis6991/gitsigns.nvim',
 
     --Godot Things
-<<<<<<< Updated upstream
-    { 'habamax/vim-godot',             lazy = false },
-=======
     { 'habamax/vim-godot', lazy = false },
->>>>>>> Stashed changes
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
