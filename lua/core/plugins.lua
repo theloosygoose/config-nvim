@@ -30,8 +30,27 @@ require("lazy").setup({
         }
     },
 
+    --Git Integrations
+    {
+        'kdheepak/lazygit.nvim',
+        cmd = {
+            "LazyGit",
+    		"LazyGitConfig",
+    		"LazyGitCurrentFile",
+    		"LazyGitFilter",
+    		"LazyGitFilterCurrentFile",
+        },
+        dependencies = { "nvim-lua/plenary.nvim"}
+    },
+
+    'lewis6991/gitsigns.nvim',
+
     --Godot Things
+<<<<<<< Updated upstream
     { 'habamax/vim-godot',             lazy = false },
+=======
+    { 'habamax/vim-godot', lazy = false },
+>>>>>>> Stashed changes
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
