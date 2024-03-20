@@ -34,7 +34,7 @@ lspconfig.omnisharp.setup {}
 lspconfig.rust_analyzer.setup {
     cmd = {"rust-analyzer"},
     filetypes = {"rust"},
-    root_dir = {"Cargo.toml", "rust-project.json"},
+    root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 }
 
 lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
