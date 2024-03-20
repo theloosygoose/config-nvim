@@ -46,6 +46,10 @@ lspconfig.gdscript.setup {
 
     root_dir = lspconfig.util.root_pattern('project.godot', '.git'),
     filetypes = { 'gd', 'gdscript', 'gdscript3' },
+    flags = {
+        debounce_text_changes = 500,
+    }
+
 
 }
 
