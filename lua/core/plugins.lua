@@ -28,15 +28,13 @@ require("lazy").setup({
 
     --Git Integrations
     {
-        'kdheepak/lazygit.nvim',
-        cmd = {
-            "LazyGit",
-    		"LazyGitConfig",
-    		"LazyGitCurrentFile",
-    		"LazyGitFilter",
-    		"LazyGitFilterCurrentFile",
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim"
         },
-        dependencies = { "nvim-lua/plenary.nvim"}
+        config = true
     },
 
     'lewis6991/gitsigns.nvim',
