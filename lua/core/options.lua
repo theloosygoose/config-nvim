@@ -1,6 +1,8 @@
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+vim.opt.numberwidth = 5
+vim.opt.columns = 85
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -13,10 +15,10 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undofile = true 
+vim.opt.undofile = true
 
 vim.opt.hlsearch = false
-vim.opt.incsearch = true 
+vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -24,4 +26,3 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 
 vim.opt.clipboard = 'unnamedplus'
-
