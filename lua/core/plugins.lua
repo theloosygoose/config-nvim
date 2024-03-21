@@ -28,6 +28,8 @@ require("lazy").setup({
         opts = {}
     },
 
+    'p00f/clangd_extensions.nvim',
+
     --Git Integrations
     {
         "NeogitOrg/neogit",

@@ -50,6 +50,8 @@ lspconfig.gdscript.setup {
 
 }
 
+lspconfig.clangd.setup {}
+
 
 vim.api.nvim_create_autocmd('LspAttach', {
 
