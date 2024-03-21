@@ -1,6 +1,3 @@
-
-let g:godot_executable = '/mnt/c/Users/thelo/Non_Registry_Programs/Godot/4.2.1/godot.exe'
-
 setlocal shiftwidth=4
 setlocal tabstop=4
 
