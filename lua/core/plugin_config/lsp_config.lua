@@ -42,7 +42,7 @@ lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
 lspconfig.gdscript.setup {
     single_file_support = false,
 
-    cmd = { "godot-wsl-lsp", "--useMirroredNetworking" },
+    cmd = { "ncat", "127.0.0.1", "6005" },
 
     root_dir = lspconfig.util.root_pattern('project.godot', '.git'),
     filetypes = { 'gd', 'gdscript', 'gdscript3' },
