@@ -31,7 +31,7 @@ require("lspconfig").lua_ls.setup {
 
 lspconfig.omnisharp.setup {}
 
-lspconfig.rust_analyzer.setup {
+lspconfig.rust_analyzer.setup{
     cmd = {"rust-analyzer"},
     filetypes = {"rust"},
     root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
@@ -41,13 +41,13 @@ lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
 
 lspconfig.gdscript.setup {
     single_file_support = false,
-    cmd = { 'ncat', '127.0.0.1', '6005' },
+
+    cmd = { "godot-wsl-lsp", "--useMirroredNetworking" },
+
     root_dir = lspconfig.util.root_pattern('project.godot', '.git'),
     filetypes = { 'gd', 'gdscript', 'gdscript3' },
 
-    flags = {
-        debounce_text_changes = 150,
-    }
+
 }
 
 
@@ -61,6 +61,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf }
+        vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)

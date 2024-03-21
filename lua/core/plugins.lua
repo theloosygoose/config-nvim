@@ -1,10 +1,10 @@
 require("lazy").setup({
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,  opts = ... },
-    { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,  opts = ... },
+    { "catppuccin/nvim", name = "catppuccin",   priority = 1000 },
 
 
-    { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
+    { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
 
     'nvim-treesitter/nvim-treesitter',
     'nvim-lua/plenary.nvim',
@@ -23,24 +23,18 @@ require("lazy").setup({
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
+        opts = {}
     },
 
     --Git Integrations
     {
-        'kdheepak/lazygit.nvim',
-        cmd = {
-            "LazyGit",
-    		"LazyGitConfig",
-    		"LazyGitCurrentFile",
-    		"LazyGitFilter",
-    		"LazyGitFilterCurrentFile",
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim"
         },
-        dependencies = { "nvim-lua/plenary.nvim"}
+        config = true
     },
 
     'lewis6991/gitsigns.nvim',

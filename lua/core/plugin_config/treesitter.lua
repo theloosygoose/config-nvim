@@ -1,5 +1,17 @@
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"c", "glsl" ,"cpp", "c_sharp" , "lua", "gdscript", "godot_resource", "gdshader", "rust", "json"},
+require 'nvim-treesitter.configs'.setup {
+    ensure_installed = {
+        "c",
+        "glsl",
+        "cpp",
+        "c_sharp",
+        "lua",
+        "gdscript",
+        "godot_resource",
+        "gdshader",
+        "rust",
+        "toml",
+        "json",
+    },
 
     sync_install = true,
     auto_install = true,
@@ -15,4 +27,3 @@ require'nvim-treesitter.configs'.setup {
         }
     },
 }
-
