@@ -28,7 +28,10 @@ require("lazy").setup({
         opts = {}
     },
 
+    -- Language Specific Things
     'p00f/clangd_extensions.nvim',
+
+    { 'mrcjkb/rustaceanvim', version = '^4', ft = { 'rust' }},
 
     --Git Integrations
     {
