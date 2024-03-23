@@ -48,6 +48,9 @@ require("lazy").setup({
 
     --Godot Things
     { 'habamax/vim-godot', lazy = false },
+    -- D A p
+    --
+    'mfussenegger/nvim-dap',
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
