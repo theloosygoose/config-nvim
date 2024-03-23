@@ -11,4 +11,5 @@ require("core.plugin_config.glslview")
 require("core.plugin_config.clangd_extensions")
 require("core.plugin_config.rustaceanvim")
 require("core.plugin_config.dap")
+require("core.plugin_config.lualine")
 

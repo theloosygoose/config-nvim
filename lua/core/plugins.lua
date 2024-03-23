@@ -11,8 +11,12 @@ require("lazy").setup({
     'nvim-treesitter/nvim-treesitter',
     'nvim-lua/plenary.nvim',
 
-
-    { 'timtro/glslView-nvim', ft = 'glsl' },
+    --lualine struff
+    {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons'}},
+    { "letieu/harpoon-lualine", dependencies = { {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2", }}
+    },
 
     { 'ThePrimeagen/harpoon', branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
 
@@ -32,6 +36,8 @@ require("lazy").setup({
     'p00f/clangd_extensions.nvim',
 
     { 'mrcjkb/rustaceanvim', version = '^4', ft = { 'rust' }},
+
+    { 'timtro/glslView-nvim', ft = 'glsl' },
 
     --Git Integrations
     {
