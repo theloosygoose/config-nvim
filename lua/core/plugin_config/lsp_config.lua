@@ -29,7 +29,7 @@ require("lspconfig").lua_ls.setup {
 }
 
 
-local path_to_omnisharp = '~/lsp/omnisharp'
+local path_to_omnisharp = "C:/Users/thelo/lsp/omnisharp"
 
 lspconfig.omnisharp.setup {
     cmd = {
@@ -38,6 +38,7 @@ lspconfig.omnisharp.setup {
         path_to_omnisharp .. '/Omnisharp.exe',
     },
     use_mono = true,
+    filetypes = {"cs"},
 }
 
 lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
