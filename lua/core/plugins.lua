@@ -40,6 +40,8 @@ require("lazy").setup({
 
     { 'timtro/glslView-nvim', ft = 'glsl' },
 
+    'lewis6991/gitsigns.nvim',
+
     --Git Integrations
     {
         "NeogitOrg/neogit",
@@ -51,7 +53,34 @@ require("lazy").setup({
         config = true
     },
 
-    'lewis6991/gitsigns.nvim',
+    -- OBSIDIAN AND MARKDOWN
+    {
+         "epwalsh/obsidian.nvim",
+          version = "*",  -- recommended, use latest release instead of latest commit
+          lazy = true,
+          ft = "markdown",
+
+          dependencies = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+
+            -- see below for full list of optional dependencies 👇
+          },
+          opts = {
+            workspaces = {
+              {
+                name = "general",
+                path = "~/Documents/obsidian_notes/general",
+              },
+              {
+                name = "rpgstory",
+                path = "~/Documents/obsidian_notes/rpgstory",
+              },
+            },
+        },
+    },
+
+
 
     --Godot Things
     { 'habamax/vim-godot', lazy = false },

@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "omnisharp", "ols"}
+    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols" }
 })
 
 local lspconfig = require('lspconfig')
@@ -29,7 +29,16 @@ require("lspconfig").lua_ls.setup {
 }
 
 
-lspconfig.omnisharp.setup {}
+local path_to_omnisharp = '~/lsp/omnisharp'
+
+lspconfig.omnisharp.setup {
+    cmd = {
+        'mono',
+        '--assembly-loader=strict',
+        path_to_omnisharp .. '/Omnisharp.exe',
+    },
+    use_mono = true,
+}
 
 lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
 
@@ -47,7 +56,6 @@ lspconfig.gdscript.setup {
 lspconfig.clangd.setup {}
 
 lspconfig.ols.setup {}
-
 
 vim.api.nvim_create_autocmd('LspAttach', {
 
