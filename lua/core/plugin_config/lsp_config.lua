@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols", "omnisharp", "omnisharp_mono" }
+    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols", "omnisharp", "omnisharp_mono", "gopls" }
 })
 
 local lspconfig = require('lspconfig')
@@ -51,6 +51,8 @@ lspconfig.gdscript.setup {
 lspconfig.clangd.setup {}
 
 lspconfig.ols.setup {}
+
+lspconfig.gopls.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
 
