@@ -54,7 +54,11 @@ require("catppuccin").setup({
     },
 })
 
+require('nordic').setup{
+    bold_keywords = true,
+}
+
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-vim.cmd [[colorscheme miasma]]
+vim.cmd [[colorscheme nordic]]

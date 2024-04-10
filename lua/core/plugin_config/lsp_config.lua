@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols" }
+    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols", "omnisharp", "omnisharp_mono" }
 })
 
 local lspconfig = require('lspconfig')
@@ -29,16 +29,10 @@ require("lspconfig").lua_ls.setup {
 }
 
 
-local path_to_omnisharp = "C:/Users/thelo/lsp/omnisharp"
+lspconfig.omnisharp_mono.setup {
 
-lspconfig.omnisharp.setup {
-    cmd = {
-        'mono',
-        '--assembly-loader=strict',
-        path_to_omnisharp .. '/Omnisharp.exe',
-    },
-    use_mono = true,
-    filetypes = {"cs"},
+    enable_ms_build_load_projects_on_demand = false,
+    enable_import_completion = true,
 }
 
 lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }

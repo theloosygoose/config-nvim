@@ -4,6 +4,7 @@ require("lazy").setup({
     { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,  opts = ... },
     { "catppuccin/nvim", name = "catppuccin",   priority = 1000 },
     { "xero/miasma.nvim", name = "miasma", priority = 1000, lazy = false},
+    { "AlexvZyl/nordic.nvim", name = "nordic", priority = 1000, lazy = false},
 
 
     { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
@@ -40,9 +41,12 @@ require("lazy").setup({
 
     { 'timtro/glslView-nvim', ft = 'glsl' },
 
-    'lewis6991/gitsigns.nvim',
+    'Hoffs/omnisharp-extended-lsp.nvim',
+
 
     --Git Integrations
+    'lewis6991/gitsigns.nvim',
+
     {
         "NeogitOrg/neogit",
         dependencies = {
