@@ -106,7 +106,12 @@ require("lazy").setup({
     'williamboman/mason-lspconfig.nvim',
 
     -- NVIM BUILT IN LSP
-    'neovim/nvim-lspconfig',
+    {
+        'neovim/nvim-lspconfig',
+        opts = {
+            inlay_hints = { enabled = true },
+        },
+    },
 
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 
