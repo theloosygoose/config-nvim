@@ -85,6 +85,18 @@ require("lazy").setup({
     },
 
 
+    -- Markdown Preview
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      build = "cd app && yarn install",
+      init = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
+    },
+
+
 
     --Godot Things
     { 'habamax/vim-godot', lazy = false },
@@ -106,12 +118,7 @@ require("lazy").setup({
     'williamboman/mason-lspconfig.nvim',
 
     -- NVIM BUILT IN LSP
-    {
-        'neovim/nvim-lspconfig',
-        opts = {
-            inlay_hints = { enabled = true },
-        },
-    },
+    'neovim/nvim-lspconfig',
 
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 
