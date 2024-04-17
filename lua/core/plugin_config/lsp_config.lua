@@ -15,6 +15,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 require("lspconfig").lua_ls.setup {
     settings = {
         Lua = {
+            hint = { enable = true },
             diagnostics = {
                 globals = { "vim" },
             },
@@ -39,12 +40,12 @@ lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
 
 lspconfig.gdscript.setup {
     single_file_support = false,
+    inlay_hints = true,
 
     cmd = { "ncat", "127.0.0.1", "6005" },
 
     root_dir = lspconfig.util.root_pattern('project.godot', '.git'),
     filetypes = { 'gd', 'gdscript', 'gdscript3' },
-
 
 }
 
@@ -54,6 +55,7 @@ lspconfig.ols.setup {}
 
 lspconfig.gopls.setup{}
 
+
 vim.api.nvim_create_autocmd('LspAttach', {
 
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -61,9 +63,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+        local opts = { buffer = ev.buf }
+
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
-        local opts = { buffer = ev.buf }
         vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
         vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
