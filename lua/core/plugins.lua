@@ -5,6 +5,8 @@ require("lazy").setup({
     { "catppuccin/nvim", name = "catppuccin",   priority = 1000 },
     { "xero/miasma.nvim", name = "miasma", priority = 1000, lazy = false},
     { "AlexvZyl/nordic.nvim", name = "nordic", priority = 1000, lazy = false},
+    { "ribru17/bamboo.nvim", name = "bamboo", proority = 1000, lazy = false},
+    { "rebelot/kanagawa.nvim", name = "kanagawa", proority = 1000, lazy = false},
 
 
     { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },

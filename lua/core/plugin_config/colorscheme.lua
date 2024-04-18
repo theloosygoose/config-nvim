@@ -58,7 +58,11 @@ require('nordic').setup{
     bold_keywords = true,
 }
 
+require('bamboo').setup{
+    style = 'vulgaris',
+}
+
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-vim.cmd [[colorscheme nordic]]
+vim.cmd [[colorscheme kanagawa]]
