@@ -10,9 +10,12 @@ require("lazy").setup({
 
 
     { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
+    { 'kylechui/nvim-surround', event = "VeryLazy"},
+    { 'easymotion/vim-easymotion'},
 
     'nvim-treesitter/nvim-treesitter',
     'nvim-lua/plenary.nvim',
+
 
     --lualine struff
     {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons'}},

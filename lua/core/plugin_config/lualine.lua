@@ -14,7 +14,6 @@ end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'nordic',
     component_separators = { '' },
     section_separators = {''},
     disabled_filetypes = {
@@ -39,8 +38,7 @@ lualine.setup {
     },
 
     lualine_c = {'filename', 'harpoon2'},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_x = {'filetype'},
     lualine_z = {'location'}
   },
   inactive_sections = {
