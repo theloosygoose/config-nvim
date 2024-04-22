@@ -63,31 +63,7 @@ require("lazy").setup({
     },
 
     -- OBSIDIAN AND MARKDOWN
-    {
-         "epwalsh/obsidian.nvim",
-          version = "*",  -- recommended, use latest release instead of latest commit
-          lazy = true,
-          ft = "markdown",
-
-          dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-
-            -- see below for full list of optional dependencies 👇
-          },
-          opts = {
-            workspaces = {
-              {
-                name = "general",
-                path = "~/Documents/obsidian_notes/general",
-              },
-              {
-                name = "rpgstory",
-                path = "~/Documents/obsidian_notes/rpgstory",
-              },
-            },
-        },
-    },
+    -- No OBSIDIAN WITH WSL
 
 
     -- Markdown Preview
