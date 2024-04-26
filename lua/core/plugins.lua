@@ -1,31 +1,36 @@
 require("lazy").setup({
 
     --colors
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true,  opts = ... },
-    { "catppuccin/nvim", name = "catppuccin",   priority = 1000 },
-    { "xero/miasma.nvim", name = "miasma", priority = 1000, lazy = false},
-    { "AlexvZyl/nordic.nvim", name = "nordic", priority = 1000, lazy = false},
-    { "ribru17/bamboo.nvim", name = "bamboo", proority = 1000, lazy = false},
-    { "rebelot/kanagawa.nvim", name = "kanagawa", proority = 1000, lazy = false},
+    { "rose-pine/neovim",         name = "rose-pine",    priority = 1000, lazy = false },
+
+    { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,   opts = ... },
+    { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
+    { "xero/miasma.nvim",         name = "miasma",       priority = 1000, lazy = false },
+    { "AlexvZyl/nordic.nvim",     name = "nordic",       priority = 1000, lazy = false },
+    { "ribru17/bamboo.nvim",      name = "bamboo",       priority = 1000, lazy = false },
+    { "rebelot/kanagawa.nvim",    name = "kanagawa",     priority = 1000, lazy = false },
 
 
-    { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
-    { 'kylechui/nvim-surround', event = "VeryLazy"},
-    { 'easymotion/vim-easymotion'},
+    { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
+    { 'kylechui/nvim-surround',   event = "VeryLazy" },
+    { 'phaazon/hop.nvim',         branch = 'v2' },
 
     'nvim-treesitter/nvim-treesitter',
     'nvim-lua/plenary.nvim',
 
 
     --lualine struff
-    {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons'}},
-    { "letieu/harpoon-lualine", dependencies = { {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2", }}
+    { 'nvim-lualine/lualine.nvim',  dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    {
+        "letieu/harpoon-lualine",
+        dependencies = { {
+            "ThePrimeagen/harpoon",
+            branch = "harpoon2",
+        } }
     },
 
-    { 'ThePrimeagen/harpoon', branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
-    { 'nvim-tree/nvim-web-devicons'},
+    { 'ThePrimeagen/harpoon',       branch = "harpoon2",                            dependencies = { "nvim-lua/plenary.nvim" } },
+    { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
 
@@ -42,7 +47,7 @@ require("lazy").setup({
     -- Language Specific Things
     'p00f/clangd_extensions.nvim',
 
-    { 'mrcjkb/rustaceanvim', version = '^4', ft = { 'rust' }},
+    { 'mrcjkb/rustaceanvim',  version = '^4', ft = { 'rust' } },
 
     { 'timtro/glslView-nvim', ft = 'glsl' },
 
@@ -64,27 +69,25 @@ require("lazy").setup({
 
     -- OBSIDIAN AND MARKDOWN
     {
-         "epwalsh/obsidian.nvim",
-          version = "*",  -- recommended, use latest release instead of latest commit
-          lazy = true,
-          ft = "markdown",
+        "epwalsh/obsidian.nvim",
+        version = "*",   -- recommended, use latest release instead of latest commit
+        lazy = true,
+        ft = "markdown",
 
-          dependencies = {
+        dependencies = {
             -- Required.
             "nvim-lua/plenary.nvim",
-
-            -- see below for full list of optional dependencies 👇
-          },
-          opts = {
+        },
+        opts = {
             workspaces = {
-              {
-                name = "general",
-                path = "~/Documents/obsidian_notes/general",
-              },
-              {
-                name = "rpgstory",
-                path = "~/Documents/obsidian_notes/rpgstory",
-              },
+                {
+                    name = "general",
+                    path = "~/Documents/obsidian_notes/general",
+                },
+                {
+                    name = "rpgstory",
+                    path = "~/Documents/obsidian_notes/rpgstory",
+                },
             },
         },
     },
@@ -92,19 +95,17 @@ require("lazy").setup({
 
     -- Markdown Preview
     {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      build = "cd app && yarn install",
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
     },
 
-
-
     --Godot Things
-    { 'habamax/vim-godot', lazy = false },
+    { 'habamax/vim-godot',             lazy = false },
     -- D A p
     --
     'mfussenegger/nvim-dap',
@@ -126,5 +127,4 @@ require("lazy").setup({
     'neovim/nvim-lspconfig',
 
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
-
 })

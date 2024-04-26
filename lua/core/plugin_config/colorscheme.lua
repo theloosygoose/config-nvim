@@ -82,8 +82,12 @@ require('kanagawa').setup{
         }
     end,
 }
+require('rose-pine').setup{
+    variant = "pine",
+    dim_inactive_windows = true,
+}
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-vim.cmd [[colorscheme kanagawa-dragon]]
+vim.cmd [[colorscheme rose-pine]]
