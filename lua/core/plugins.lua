@@ -29,7 +29,7 @@ require("lazy").setup({
         } }
     },
 
-    { 'ThePrimeagen/harpoon',       branch = "harpoon2",                            dependencies = { "nvim-lua/plenary.nvim" } },
+    { 'ThePrimeagen/harpoon',       branch = "harpoon2",                             dependencies = { "nvim-lua/plenary.nvim" } },
     { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
@@ -70,7 +70,7 @@ require("lazy").setup({
     -- OBSIDIAN AND MARKDOWN
     {
         "epwalsh/obsidian.nvim",
-        version = "*",   -- recommended, use latest release instead of latest commit
+        version = "*", -- recommended, use latest release instead of latest commit
         lazy = true,
         ft = "markdown",
 
@@ -124,7 +124,7 @@ require("lazy").setup({
     'williamboman/mason-lspconfig.nvim',
 
     -- NVIM BUILT IN LSP
-    'neovim/nvim-lspconfig',
+    { 'neovim/nvim-lspconfig' },
 
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 })

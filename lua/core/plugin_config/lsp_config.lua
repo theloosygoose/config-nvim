@@ -53,13 +53,54 @@ lspconfig.clangd.setup {}
 
 lspconfig.ols.setup {}
 
-lspconfig.gopls.setup{}
+lspconfig.gopls.setup {
+    settings = {
+        gopls = {
+            hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+            }
+        }
+    }
+}
 
-lspconfig.jsonls.setup{}
+lspconfig.jsonls.setup {}
 
+-- WebDev Stuff
+lspconfig.emmet_language_server.setup {
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+    init_options = {
+        ---@type table<string, string>
+        includeLanguages = {},
+        --- @type string[]
+        excludeLanguages = {},
+        --- @type string[]
+        extensionsPath = {},
+        --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+        preferences = {},
+        --- @type boolean Defaults to `true`
+        showAbbreviationSuggestions = true,
+        --- @type "always" | "never" Defaults to `"always"`
+        showExpandedAbbreviation = "always",
+        --- @type boolean Defaults to `false`
+        showSuggestionsAsSnippets = false,
+        --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+        syntaxProfiles = {},
+        --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+        variables = {},
+    },
+
+}
+
+lspconfig.htmx.setup {}
+lspconfig.cssls.setup {}
 
 vim.api.nvim_create_autocmd('LspAttach', {
-
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
@@ -67,6 +108,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         local opts = { buffer = ev.buf }
 
+        vim.keymap.set('n', 'gh', function ()
+            vim.lsp.inlay_hint.enable( ev.buf, not vim.lsp.inlay_hint.is_enabled())
+        end, opts)
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
