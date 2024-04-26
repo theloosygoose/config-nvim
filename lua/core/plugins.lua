@@ -67,49 +67,6 @@ require("lazy").setup({
         config = true
     },
 
-    -- OBSIDIAN AND MARKDOWN
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*", -- recommended, use latest release instead of latest commit
-        lazy = true,
-        ft = "markdown",
-
-        dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "general",
-                    path = "~/Documents/obsidian_notes/general",
-                },
-                {
-                    name = "rpgstory",
-                    path = "~/Documents/obsidian_notes/rpgstory",
-                },
-            },
-        },
-    },
-
-
-    -- Markdown Preview
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
-
-    --Godot Things
-    { 'habamax/vim-godot',             lazy = false },
-    -- D A p
-    --
-    'mfussenegger/nvim-dap',
-
     -- COMPLETION
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
