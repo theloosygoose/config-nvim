@@ -73,7 +73,7 @@ lspconfig.jsonls.setup {}
 
 -- WebDev Stuff
 lspconfig.emmet_language_server.setup {
-    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+    filetypes = { "templ", "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
     init_options = {
         ---@type table<string, string>
         includeLanguages = {},
@@ -96,9 +96,14 @@ lspconfig.emmet_language_server.setup {
     },
 
 }
-
-lspconfig.htmx.setup {}
+lspconfig.htmx.setup {
+    filetypes = {"html", "templ"}
+}
 lspconfig.cssls.setup {}
+lspconfig.templ.setup {}
+lspconfig.html.setup {
+    filetypes = {"html", "templ"}
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),

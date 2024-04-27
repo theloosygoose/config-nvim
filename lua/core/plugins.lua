@@ -15,7 +15,7 @@ require("lazy").setup({
     { 'kylechui/nvim-surround',   event = "VeryLazy" },
     { 'phaazon/hop.nvim',         branch = 'v2' },
 
-    'nvim-treesitter/nvim-treesitter',
+    {'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ'}, build = ':TSUpdate',},
     'nvim-lua/plenary.nvim',
 
 
