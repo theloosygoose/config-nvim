@@ -15,3 +15,5 @@ require("core.plugin_config.rustaceanvim")
 require("core.plugin_config.lualine")
 require("core.plugin_config.web_devicons")
 require("core.plugin_config.markdown_preview")
+require("core.plugin_config.highlight_colors")
+

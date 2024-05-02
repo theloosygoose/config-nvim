@@ -33,6 +33,7 @@ require("lazy").setup({
     { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
+    'brenoprata10/nvim-highlight-colors',
 
     {
         "folke/which-key.nvim",
