@@ -1,5 +1,9 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols", "omnisharp", "omnisharp_mono", "gopls" }
+    ensure_installed = {
+        "lua_ls", "glsl_analyzer",
+        "clangd", "ols",
+        "gopls"
+    }
 })
 
 local lspconfig = require('lspconfig')
@@ -104,6 +108,10 @@ lspconfig.templ.setup {}
 lspconfig.html.setup {
     filetypes = {"html", "templ"}
 }
+lspconfig.tailwindcss.setup{
+    filetypes = {"html", "templ", "markdown", "svelte", "css"}
+}
+lspconfig.tsserver.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
