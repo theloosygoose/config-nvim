@@ -125,9 +125,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         local opts = { buffer = ev.buf }
 
-        vim.keymap.set('n', 'gh', function ()
-            vim.lsp.inlay_hint.enable( ev.buf, not vim.lsp.inlay_hint.is_enabled())
-        end, opts)
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)

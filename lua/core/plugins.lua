@@ -33,7 +33,16 @@ require("lazy").setup({
     { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
+
+    {
+      'stevearc/oil.nvim',
+      opts = {},
+      -- Optional dependencies
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+
     'brenoprata10/nvim-highlight-colors',
+
 
     {
         "folke/which-key.nvim",
