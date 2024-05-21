@@ -1,5 +1,8 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "glsl_analyzer", "clangd", "ols", "omnisharp", "omnisharp_mono", "gopls" }
+    ensure_installed = {
+        "lua_ls", "clangd", "gopls", "svelte",
+        "tailwindcss"
+    }
 })
 
 local lspconfig = require('lspconfig')
@@ -73,7 +76,7 @@ lspconfig.jsonls.setup {}
 
 -- WebDev Stuff
 lspconfig.emmet_language_server.setup {
-    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+    filetypes = { "templ", "css", "eruby", "html", "javascriptreact", "less", "sass", "scss"},
     init_options = {
         ---@type table<string, string>
         includeLanguages = {},
@@ -96,9 +99,23 @@ lspconfig.emmet_language_server.setup {
     },
 
 }
-
-lspconfig.htmx.setup {}
+lspconfig.htmx.setup {
+    filetypes = {"html", "templ"}
+}
 lspconfig.cssls.setup {}
+lspconfig.templ.setup {}
+lspconfig.html.setup {
+    filetypes = {"html", "templ"}
+}
+lspconfig.tailwindcss.setup{
+    filetypes = {"html", "templ", "markdown", "svelte", "css"}
+}
+lspconfig.tsserver.setup{}
+
+lspconfig.svelte.setup{}
+
+-- SQL
+lspconfig.sqlls.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),

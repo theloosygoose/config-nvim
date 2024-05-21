@@ -15,7 +15,7 @@ require("lazy").setup({
     { 'kylechui/nvim-surround',   event = "VeryLazy" },
     { 'phaazon/hop.nvim',         branch = 'v2' },
 
-    'nvim-treesitter/nvim-treesitter',
+    {'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ'}, build = ':TSUpdate',},
     'nvim-lua/plenary.nvim',
 
 
@@ -33,12 +33,17 @@ require("lazy").setup({
     { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
+
     {
       'stevearc/oil.nvim',
       opts = {},
       -- Optional dependencies
       dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+
+    'brenoprata10/nvim-highlight-colors',
+
+
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -71,49 +76,6 @@ require("lazy").setup({
         },
         config = true
     },
-
-    -- OBSIDIAN AND MARKDOWN
-    {
-        "epwalsh/obsidian.nvim",
-        version = "*", -- recommended, use latest release instead of latest commit
-        lazy = true,
-        ft = "markdown",
-
-        dependencies = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-        },
-        opts = {
-            workspaces = {
-                {
-                    name = "general",
-                    path = "~/Documents/obsidian_notes/general",
-                },
-                {
-                    name = "rpgstory",
-                    path = "~/Documents/obsidian_notes/rpgstory",
-                },
-            },
-        },
-    },
-
-
-    -- Markdown Preview
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
-
-    --Godot Things
-    { 'habamax/vim-godot',             lazy = false },
-    -- D A p
-    --
-    'mfussenegger/nvim-dap',
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
