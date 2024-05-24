@@ -20,3 +20,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Switching Between Panes
+vim.keymap.set("n", "<Tab>j", "<C-W>j")
+vim.keymap.set("n", "<Tab>k", "<C-W>k")

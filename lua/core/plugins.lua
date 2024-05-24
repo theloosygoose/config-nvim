@@ -34,6 +34,8 @@ require("lazy").setup({
 
     { 'ibhagwan/fzf-lua' },
 
+    {"folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, },
+
     {
       'stevearc/oil.nvim',
       opts = {},
