@@ -45,7 +45,6 @@ require("lazy").setup({
 
     'brenoprata10/nvim-highlight-colors',
 
-
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -77,6 +76,15 @@ require("lazy").setup({
             "nvim-telescope/telescope.nvim"
         },
         config = true
+    },
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      build = "cd app && yarn install",
+      init = function()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
     },
 
     -- COMPLETION
