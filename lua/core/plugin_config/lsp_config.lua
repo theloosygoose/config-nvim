@@ -1,7 +1,7 @@
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls", "clangd", "gopls", "svelte",
-        "tailwindcss"
+        "tailwindcss", "pyright"
     }
 })
 
@@ -72,7 +72,11 @@ lspconfig.gopls.setup {
     }
 }
 
-lspconfig.jsonls.setup {}
+lspconfig.jsonls.setup {
+    settings = {
+        hint = { enable = true },
+    }
+}
 
 -- WebDev Stuff
 lspconfig.emmet_language_server.setup {
@@ -117,6 +121,9 @@ lspconfig.svelte.setup{}
 -- SQL
 lspconfig.sqlls.setup{}
 
+-- Python
+lspconfig.pyright.setup{}
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
@@ -124,6 +131,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
         local opts = { buffer = ev.buf }
+
+        vim.keymap.set('n', '<space>h', function ()
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            end
+        )
 
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions

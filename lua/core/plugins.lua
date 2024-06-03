@@ -43,8 +43,6 @@ require("lazy").setup({
       dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
-    'brenoprata10/nvim-highlight-colors',
-
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -68,15 +66,6 @@ require("lazy").setup({
     --Git Integrations
     'lewis6991/gitsigns.nvim',
 
-    {
-        "NeogitOrg/neogit",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "sindrets/diffview.nvim",
-            "nvim-telescope/telescope.nvim"
-        },
-        config = true
-    },
     {
       "iamcco/markdown-preview.nvim",
       cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -104,4 +93,8 @@ require("lazy").setup({
     { 'neovim/nvim-lspconfig' },
 
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
+
+    -- Quarto
+    'quarto-dev/quarto-nvim',
+    'jmbuhr/otter.nvim',
 })
