@@ -5,11 +5,11 @@ require("lazy").setup({
 
     { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,   opts = ... },
     { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
-    { "xero/miasma.nvim",         name = "miasma",       priority = 1000, lazy = false },
     { "AlexvZyl/nordic.nvim",     name = "nordic",       priority = 1000, lazy = false },
     { "ribru17/bamboo.nvim",      name = "bamboo",       priority = 1000, lazy = false },
     { "rebelot/kanagawa.nvim",    name = "kanagawa",     priority = 1000, lazy = false },
-
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
 
     { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
     { 'kylechui/nvim-surround',   event = "VeryLazy" },
