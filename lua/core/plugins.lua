@@ -13,7 +13,6 @@ require("lazy").setup({
 
     { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
     { 'kylechui/nvim-surround',   event = "VeryLazy" },
-    { 'phaazon/hop.nvim',         branch = 'v2' },
 
     {'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ'}, build = ':TSUpdate',},
     'nvim-lua/plenary.nvim',
@@ -57,10 +56,6 @@ require("lazy").setup({
     'p00f/clangd_extensions.nvim',
 
     { 'mrcjkb/rustaceanvim',  version = '^4', ft = { 'rust' } },
-
-    { 'timtro/glslView-nvim', ft = 'glsl' },
-
-    'Hoffs/omnisharp-extended-lsp.nvim',
 
 
     --Git Integrations
