@@ -83,10 +83,10 @@ require("lazy").setup({
     -- LSP SHIT
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+    'nvimtools/none-ls.nvim',
 
     -- NVIM BUILT IN LSP
     { 'neovim/nvim-lspconfig' },
-
     { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 
     -- Quarto

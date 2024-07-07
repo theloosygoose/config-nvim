@@ -11,7 +11,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
 
 vim.keymap.set("x", "<leader>p", "\"_dp")
 
@@ -24,3 +23,6 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Switching Between Panes
 vim.keymap.set("n", "<Tab>j", "<C-W>j")
 vim.keymap.set("n", "<Tab>k", "<C-W>k")
+
+-- Quarto Create Cell
+vim.keymap.set("n", "<leader>cb", "<Esc>i```{python}<CR>```<Esc>O")
