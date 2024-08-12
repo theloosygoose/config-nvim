@@ -1,20 +1,20 @@
 require("lazy").setup({
 
     --colors
-    { "rose-pine/neovim",         name = "rose-pine",    priority = 1000, lazy = false },
+    { "rose-pine/neovim",                name = "rose-pine",                               priority = 1000,     lazy = false },
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000,       config = true,   opts = ... },
-    { "catppuccin/nvim",          name = "catppuccin",   priority = 1000 },
-    { "AlexvZyl/nordic.nvim",     name = "nordic",       priority = 1000, lazy = false },
-    { "ribru17/bamboo.nvim",      name = "bamboo",       priority = 1000, lazy = false },
-    { "rebelot/kanagawa.nvim",    name = "kanagawa",     priority = 1000, lazy = false },
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+    { "ellisonleao/gruvbox.nvim",        priority = 1000,                                  config = true,       opts = ... },
+    { "catppuccin/nvim",                 name = "catppuccin",                              priority = 1000 },
+    { "AlexvZyl/nordic.nvim",            name = "nordic",                                  priority = 1000,     lazy = false },
+    { "ribru17/bamboo.nvim",             name = "bamboo",                                  priority = 1000,     lazy = false },
+    { "rebelot/kanagawa.nvim",           name = "kanagawa",                                priority = 1000,     lazy = false },
+    { "bluz71/vim-moonfly-colors",       name = "moonfly",                                 lazy = false,        priority = 1000 },
+    { "bluz71/vim-nightfly-colors",      name = "nightfly",                                lazy = false,        priority = 1000 },
 
-    { 'windwp/nvim-autopairs',    event = "InsertEnter", config = true },
-    { 'kylechui/nvim-surround',   event = "VeryLazy" },
+    { 'windwp/nvim-autopairs',           event = "InsertEnter",                            config = true },
+    { 'kylechui/nvim-surround',          event = "VeryLazy" },
 
-    {'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ'}, build = ':TSUpdate',},
+    { 'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ' }, build = ':TSUpdate', },
     'nvim-lua/plenary.nvim',
 
 
@@ -28,18 +28,18 @@ require("lazy").setup({
         } }
     },
 
-    { 'ThePrimeagen/harpoon',       branch = "harpoon2",                             dependencies = { "nvim-lua/plenary.nvim" } },
+    { 'ThePrimeagen/harpoon',       branch = "harpoon2",                              dependencies = { "nvim-lua/plenary.nvim" } },
     { 'nvim-tree/nvim-web-devicons' },
 
     { 'ibhagwan/fzf-lua' },
 
-    {"folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, },
+    { "folke/trouble.nvim",         dependencies = { "nvim-tree/nvim-web-devicons" }, },
 
     {
-      'stevearc/oil.nvim',
-      opts = {},
-      -- Optional dependencies
-      dependencies = { "nvim-tree/nvim-web-devicons" },
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
     {
@@ -55,21 +55,26 @@ require("lazy").setup({
     -- Language Specific Things
     'p00f/clangd_extensions.nvim',
 
-    { 'mrcjkb/rustaceanvim',  version = '^4', ft = { 'rust' } },
+    { 'mrcjkb/rustaceanvim',           version = '^4', ft = { 'rust' } },
 
 
     --Git Integrations
     'lewis6991/gitsigns.nvim',
-
     {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      build = "cd app && yarn install",
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
+        "OXY2DEV/markview.nvim",
+        lazy = false, -- Recommended
+        -- ft = "markdown" -- If you decide to lazy-load anyway
+
+        dependencies = {
+            -- You will not need this if you installed the
+            -- parsers manually
+            -- Or if the parsers are in your $RUNTIMEPATH
+            "nvim-treesitter/nvim-treesitter",
+
+            "nvim-tree/nvim-web-devicons"
+        }
     },
+
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
@@ -87,7 +92,7 @@ require("lazy").setup({
 
     -- NVIM BUILT IN LSP
     { 'neovim/nvim-lspconfig' },
-    { "nvim-telescope/telescope.nvim", tag = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
+    { "nvim-telescope/telescope.nvim", tag = "0.1.4",  dependencies = { "nvim-lua/plenary.nvim" } },
 
     -- Quarto
     'quarto-dev/quarto-nvim',
