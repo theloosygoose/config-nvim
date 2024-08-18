@@ -15,6 +15,12 @@ require("lazy").setup({
     },
 
     'nvim-lua/plenary.nvim',
+
+    { "nvim-telescope/telescope.nvim",
+        tag = "0.1.4",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+
     -- NICE MARKDOWN
     { "OXY2DEV/markview.nvim", lazy = false,
         dependencies = {

@@ -1,16 +1,5 @@
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = {
-        "c",
-        "glsl",
-        "cpp",
-        "c_sharp",
-        "lua",
-        "gdscript",
-        "godot_resource",
-        "gdshader",
-        "rust",
-        "toml",
-        "json",
         "markdown",
     },
 
@@ -23,8 +12,5 @@ require 'nvim-treesitter.configs'.setup {
 
     indent = {
         enable = true,
-        disable = {
-            "gdscript",
-        }
     },
 }
