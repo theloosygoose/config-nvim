@@ -1,6 +1,9 @@
 require("lazy").setup({
+    -- Colorscheme
+    'yorickpeterse/vim-paper',
+
     -- Writing PLUGINS
-    'junegunn/goyo.vim',
+    'folke/zen-mode.nvim',
 
     'Ron89/thesaurus_query.vim',
 
@@ -31,5 +34,17 @@ require("lazy").setup({
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+
+    { 'ibhagwan/fzf-lua' },
+
+    -- COMPLETION
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+
+    -- LSP
+    'neovim/nvim-lspconfig',
+
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
 
 })

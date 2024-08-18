@@ -14,9 +14,10 @@ if vim.g.neovide then
 
     vim.opt.rtp:prepend(lazypath)
 
-    require("neovide.plugins")
     require("neovide.options")
+    require("neovide.plugins")
     require("neovide.keymaps")
+    require("core.plugin_config")
 
 else
 
