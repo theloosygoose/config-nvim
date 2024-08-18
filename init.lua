@@ -17,7 +17,7 @@ if vim.g.neovide then
     require("neovide.options")
     require("neovide.plugins")
     require("neovide.keymaps")
-    require("core.plugin_config")
+    require("neovide.plugin_config")
 
 else
 
