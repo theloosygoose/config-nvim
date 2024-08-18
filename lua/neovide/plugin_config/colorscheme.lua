@@ -1,1 +1,1 @@
-vim.cmd [[colorscheme vim-paper]]
+vim.cmd [[colorscheme mellow]]

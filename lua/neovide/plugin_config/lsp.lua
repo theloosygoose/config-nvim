@@ -15,7 +15,18 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
     require('cmp_nvim_lsp').default_capabilities()
 )
 
-lspconfig.ltex.setup{}
+lspconfig.ltex.setup{
+    filetypes = { "markdonwn" },
+
+    settings = {
+        ltex ={
+            enables = {
+                "markdown",
+                "latex"
+            }
+        }
+    }
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),

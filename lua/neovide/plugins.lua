@@ -1,6 +1,8 @@
 require("lazy").setup({
     -- Colorscheme
     'yorickpeterse/vim-paper',
+    'mellow-theme/mellow.nvim',
+
 
     -- Writing PLUGINS
     'folke/zen-mode.nvim',
@@ -52,5 +54,15 @@ require("lazy").setup({
 
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+
+    -- LTEX LSP
+    {
+        "jhofscheier/ltex-utils.nvim",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "nvim-telescope/telescope.nvim",
+            -- "nvim-telescope/telescope-fzf-native.nvim", -- optional
+        },
+    },
 
 })
