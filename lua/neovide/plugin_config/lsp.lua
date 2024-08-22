@@ -9,23 +9,43 @@ require("mason-lspconfig").setup({
 local lspconfig = require('lspconfig')
 local lsp_defaults = lspconfig.util.default_config
 
+
 lsp_defaults.capabilities = vim.tbl_deep_extend(
     'force',
     lsp_defaults.capabilities,
     require('cmp_nvim_lsp').default_capabilities()
 )
 
+-- Spellcheck file
+local words = {}
+
+for word in io.open(vim.fn.stdpath("config") .. "/spell/en.utf-8.add", "r"):lines() do
+    table.insert(words, word)
+end
+
 lspconfig.ltex.setup{
-    filetypes = { "markdonwn" },
+    filetypes = { "markdown" },
+
+    on_attach = function(client, bufnr)
+        require('ltex-utils').on_attach(bufnr)
+
+    end,
 
     settings = {
-        ltex ={
+        ltex = {
+            dictionary = {
+                ["en-US"] = {words, "Demsas"},
+            },
             enables = {
                 "markdown",
                 "latex"
             }
         }
     }
+}
+
+lspconfig.grammarly.setup{
+    filetypes = { "markdown" },
 }
 
 vim.api.nvim_create_autocmd('LspAttach', {

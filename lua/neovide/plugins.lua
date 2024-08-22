@@ -2,6 +2,7 @@ require("lazy").setup({
     -- Colorscheme
     'yorickpeterse/vim-paper',
     'mellow-theme/mellow.nvim',
+    'rmehri01/onenord.nvim',
 
 
     -- Writing PLUGINS
@@ -22,6 +23,12 @@ require("lazy").setup({
         tag = "0.1.4",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
+    -- PANDOC
+    {'aspeddro/pandoc.nvim',
+        config = function()
+            require('pandoc').setup()
+        end
+    },
 
     -- NICE MARKDOWN
     { "OXY2DEV/markview.nvim", lazy = false,
@@ -36,8 +43,7 @@ require("lazy").setup({
     },
 
     -- FILE MANAGER
-    {
-        'stevearc/oil.nvim',
+    { 'stevearc/oil.nvim',
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -54,6 +60,8 @@ require("lazy").setup({
 
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+
+    'nvimtools/none-ls.nvim',
 
     -- LTEX LSP
     {
