@@ -1,17 +1,17 @@
 require("lazy").setup({
 
     --colors
-    { "rose-pine/neovim",                name = "rose-pine",                               priority = 1000,     lazy = false },
+    { "rose-pine/neovim",                name = "rose-pine",                                priority = 1000,     lazy = false },
 
-    { "ellisonleao/gruvbox.nvim",        priority = 1000,                                  config = true,       opts = ... },
-    { "catppuccin/nvim",                 name = "catppuccin",                              priority = 1000 },
-    { "AlexvZyl/nordic.nvim",            name = "nordic",                                  priority = 1000,     lazy = false },
-    { "ribru17/bamboo.nvim",             name = "bamboo",                                  priority = 1000,     lazy = false },
-    { "rebelot/kanagawa.nvim",           name = "kanagawa",                                priority = 1000,     lazy = false },
-    { "bluz71/vim-moonfly-colors",       name = "moonfly",                                 lazy = false,        priority = 1000 },
-    { "bluz71/vim-nightfly-colors",      name = "nightfly",                                lazy = false,        priority = 1000 },
+    { "ellisonleao/gruvbox.nvim",        priority = 1000,                                   config = true,       opts = ... },
+    { "catppuccin/nvim",                 name = "catppuccin",                               priority = 1000 },
+    { "AlexvZyl/nordic.nvim", name = "nordic", priority = 1000,     lazy = false },
+    { "ribru17/bamboo.nvim",             name = "bamboo",                                   priority = 1000,     lazy = false },
+    { "rebelot/kanagawa.nvim",           name = "kanagawa",                                 priority = 1000,     lazy = false },
+    { "bluz71/vim-moonfly-colors",       name = "moonfly",                                  lazy = false,        priority = 1000 },
+    { "bluz71/vim-nightfly-colors",      name = "nightfly",                                 lazy = false,        priority = 1000 },
 
-    { 'windwp/nvim-autopairs',           event = "InsertEnter",                            config = true },
+    { 'windwp/nvim-autopairs',           event = "InsertEnter",                             config = true },
     { 'kylechui/nvim-surround',          event = "VeryLazy" },
 
     { 'nvim-treesitter/nvim-treesitter', dependencies = { 'vrischmann/tree-sitter-templ' }, build = ':TSUpdate', },
