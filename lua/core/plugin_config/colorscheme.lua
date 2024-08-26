@@ -90,4 +90,4 @@ require('rose-pine').setup{
 vim.o.termguicolors = true
 vim.o.background = "dark"
 
-vim.cmd [[colorscheme nightfly]]
+vim.cmd [[colorscheme kanagawa]]

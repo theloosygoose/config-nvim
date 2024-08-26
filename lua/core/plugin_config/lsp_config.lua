@@ -1,7 +1,19 @@
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "lua_ls", "clangd", "gopls", "svelte",
-        "tailwindcss", "pyright"
+        lsp = {
+            "lua_ls",
+            "clangd",
+            "gopls",
+            "svelte",
+            "tailwindcss",
+            "pyright",
+            "omnisharp_mono",
+        },
+
+        tools = {
+            "gdtoolkit",
+            "csharpier",
+        }
     }
 })
 

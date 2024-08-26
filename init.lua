@@ -1,4 +1,4 @@
-if vim.g.vscode then
+if vim.g.neovide then
 
     local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
     if not vim.loop.fs_stat(lazypath) then
@@ -14,9 +14,10 @@ if vim.g.vscode then
 
     vim.opt.rtp:prepend(lazypath)
 
-    require("vscode.plugins")
-    require("core.options")
-    require("core.keymaps")
+    require("neovide.options")
+    require("neovide.plugins")
+    require("neovide.keymaps")
+    require("neovide.plugin_config")
 
 else
 
