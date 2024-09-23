@@ -44,6 +44,7 @@ require("lspconfig").lua_ls.setup {
     }
 }
 
+-- LANGUAGE CONFIG START --
 
 lspconfig.omnisharp_mono.setup {
 
@@ -65,8 +66,6 @@ lspconfig.gdscript.setup {
 }
 
 lspconfig.clangd.setup {}
-
-lspconfig.ols.setup {}
 
 lspconfig.gopls.setup {
     settings = {
@@ -136,6 +135,8 @@ lspconfig.sqlls.setup{}
 -- Python
 lspconfig.pyright.setup{}
 
+-- LANGUAGE CONFIG END --
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
@@ -144,6 +145,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         local opts = { buffer = ev.buf }
 
+        -- WIP - Show inlay hints
         vim.keymap.set('n', '<space>h', function ()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
             end

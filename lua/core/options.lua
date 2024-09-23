@@ -14,7 +14,6 @@ vim.opt.textwidth = 100
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
-
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 

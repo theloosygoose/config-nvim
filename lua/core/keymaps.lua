@@ -23,6 +23,3 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Switching Between Panes
 vim.keymap.set("n", "<Tab>j", "<C-W>j")
 vim.keymap.set("n", "<Tab>k", "<C-W>k")
-
--- Quarto Create Cell
-vim.keymap.set("n", "<leader>cb", "<Esc>i```{python}<CR>```<Esc>O")
