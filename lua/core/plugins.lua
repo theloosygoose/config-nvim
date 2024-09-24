@@ -3,8 +3,10 @@ require("lazy").setup({
     -- ColorSchemes
     { "rebelot/kanagawa.nvim", name = "kanagawa", priority = 1000, lazy = false },
 
-
-
+    { "jesseleite/nvim-noirbuddy",
+        dependencies = "tjdevries/colorbuddy.nvim",
+        priority = 1000
+    },
 
 
     -- Basics -- 

@@ -5,7 +5,6 @@ require("mason-lspconfig").setup({
             "clangd",
             "gopls",
             "svelte",
-            "tailwindcss",
             "pyright",
             "omnisharp_mono",
         },
@@ -125,7 +124,7 @@ lspconfig.html.setup {
 lspconfig.tailwindcss.setup{
     filetypes = {"html", "templ", "markdown", "svelte", "css"}
 }
-lspconfig.tsserver.setup{}
+lspconfig.ts_ls.setup{}
 
 lspconfig.svelte.setup{}
 

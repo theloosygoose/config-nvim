@@ -1,5 +1,4 @@
 local lualine = require('lualine')
-local default_theme = { fg = "#54de60", bg = "None" }
 
 local function diff_source()
     local gitsigns = vim.b.gitsigns_status_dict
@@ -11,11 +10,6 @@ local function diff_source()
         }
     end
 end
-
-vim.opt.fillchars = {
-    stl = "-",
-    stlnc = "-",
-}
 
 lualine.setup {
     options = {
@@ -35,16 +29,6 @@ lualine.setup {
             tabline = 1000,
             winbar = 1000,
         },
-        theme = {
-            normal = {
-                c = default_theme,
-                x = default_theme,
-            },
-            inactive = {
-                c = default_theme,
-                x = default_theme,
-            }
-        }
     },
     sections = {
         lualine_a = { 'branch' },
