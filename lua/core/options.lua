@@ -12,6 +12,10 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.numberwidth = 1
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldexpr ="nvim_treesitter#foldexpr()"
+vim.opt.foldlevelstart = 99
+
 vim.opt.smartindent = true
 
 vim.opt.wrap = true
