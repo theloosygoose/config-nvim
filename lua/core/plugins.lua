@@ -4,6 +4,7 @@ require("lazy").setup({
     -- Basics -- 
     ------------
     --colorizer
+    --
     {'norcalli/nvim-colorizer.lua', event = "BufEnter", opts = {"*"} },
 
 
@@ -60,6 +61,16 @@ require("lazy").setup({
 
     { 'nvim-tree/nvim-web-devicons' },
 
+    -- IDK use only sometimes
+--[[ 
+    {
+        "dgox16/devicon-colorscheme.nvim",
+        dependencies = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    },
+]]--
+
     -- File Exploring and Navigation
     ------
 
@@ -77,7 +88,7 @@ require("lazy").setup({
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.4",
-        dependencies = { 
+        dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-file-browser.nvim"
         }
@@ -175,7 +186,7 @@ require("lazy").setup({
 
             vim.cmd("highlight @keyword guifg=#555555")
             vim.cmd("highlight @keyword.operator guifg=#555555")
-            vim.cmd("highlight @keyword.function guifg=#ffffff")
+            vim.cmd("highlight @keyword.function guifg=#888888")
             vim.cmd("highlight @keyword.return guifg=#666666")
 
             vim.cmd("highlight @punctuation.bracket guifg=#777777")
