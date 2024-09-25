@@ -173,9 +173,9 @@ require("lazy").setup({
 
             vim.cmd("highlight @constant guifg=#777777")
 
-            vim.cmd("highlight @keyword guifg=#666666")
-            vim.cmd("highlight @keyword.operator guifg=#666666")
-            vim.cmd("highlight @keyword.function guifg=#666666")
+            vim.cmd("highlight @keyword guifg=#555555")
+            vim.cmd("highlight @keyword.operator guifg=#555555")
+            vim.cmd("highlight @keyword.function guifg=#ffffff")
             vim.cmd("highlight @keyword.return guifg=#666666")
 
             vim.cmd("highlight @punctuation.bracket guifg=#777777")
@@ -183,7 +183,7 @@ require("lazy").setup({
             vim.cmd("highlight @constructor guifg=#888888")
 
             vim.cmd("highlight @operator guifg=#555555")
-            vim.cmd("highlight @comment guifg=#444444")
+            vim.cmd("highlight @comment guifg=#333333")
             vim.cmd("highlight @string guifg=#555555")
 
             vim.cmd("highlight @keyword.coroutine guifg=#555555")

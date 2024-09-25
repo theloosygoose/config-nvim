@@ -1,14 +1,14 @@
-vim.opt.nu = true
 vim.opt.relativenumber = true
-
 vim.opt.nu = true
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
 vim.opt.scrolloff = 8
 vim.opt.showtabline = 1
-vim.opt.termguicolors = true
+
 vim.opt.showmode = false
 vim.opt.numberwidth = 1
 
@@ -36,6 +36,9 @@ vim.opt.timeoutlen = 300
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.scrolloff = 10
+
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 vim.opt.fillchars:append({
 	eob = " ",

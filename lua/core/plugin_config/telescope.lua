@@ -1,4 +1,5 @@
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
 local layout_strategies = require("telescope.pickers.layout_strategies")
@@ -35,7 +36,7 @@ telescope.setup({
         layout_config = {
             preview_cutoff = 1,
             width = 0.45,
-            height = 0.6,
+            height = 0.9,
         },
         prompt_prefix = " ❯ ",
         selection_caret = "❯ ",
@@ -43,6 +44,12 @@ telescope.setup({
         winblend = 0,
         color_devicons = false,
         sorting_strategy = "descending",
+
+        mappings = {
+            n = {
+                ["<leader>q"] = actions.close,
+            }
+        }
     },
 	pickers = {
         git_status = {
@@ -57,7 +64,7 @@ telescope.setup({
                 hidden = true,
                 initial_mode = "normal",
                 use_fd = false,
-                respect_gitignore = false,
+                respect_gitignore = true,
         },
     },
 })

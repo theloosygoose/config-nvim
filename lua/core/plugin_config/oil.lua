@@ -10,17 +10,18 @@ oil.setup {
         show_hidden = true,
     },
     float = {
-        padding = 2,
-        max_width = 0,
-        max_height = 0,
-        border = "rounded",
+        padding = 4,
+        max_width = 80,
+        max_height = 50,
+
         win_options = {
             winblend = 0,
         },
+
+        preview_split = "above",
         -- This is the config that will be passed to nvim_open_win.
         -- Change values here to customize the layout
         override = function(conf)
-            return conf
         end,
     },
     git = {
@@ -42,10 +43,12 @@ oil.setup {
         max_height = 0.9,
         min_height = { 5, 0.1 },
         height = nil,
-        border = "rounded",
+
         win_options = {
             winblend = 0,
         },
+
+        update_on_cursor_moved = true,
     },
     progress = {
         max_width = 0.9,
@@ -54,7 +57,7 @@ oil.setup {
         max_height = { 10, 0.9 },
         min_height = { 5, 0.1 },
         height = nil,
-        border = "rounded",
+
         minimized_border = "none",
         win_options = {
             winblend = 0,
