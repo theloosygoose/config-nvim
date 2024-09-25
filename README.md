@@ -4,5 +4,6 @@
 
 ## Keybindings
 
-<leader> + p + v -> open file directory 
-<leader>
+## Plugins
+
+## Colorschemes
