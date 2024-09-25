@@ -1,5 +1,11 @@
 require("lazy").setup({
 
+    -- non default colorschemes
+    {
+        'ferdinandrau/lavish.nvim',
+        priority = 1000
+    },
+
 
     -- Basics -- 
     ------------
@@ -161,7 +167,7 @@ require("lazy").setup({
                     undercurl = true,
                 },
                 colors = {
-                    background = "#161616",
+                    background = "#181818",
                     primary = "#333333",
                     secondary = "#ffffff",
                     noir_0 = "#f1f1f1",
@@ -183,10 +189,10 @@ require("lazy").setup({
 
 		vim.cmd("highlight @constant guifg=#777777")
 
-		vim.cmd("highlight @keyword guifg=#444444")
-		vim.cmd("highlight @keyword.operator guifg=#555555")
-		vim.cmd("highlight @keyword.function guifg=#666666")
-		vim.cmd("highlight @keyword.return guifg=#666666")
+		vim.cmd("highlight @keyword guifg=#666666")
+		vim.cmd("highlight @keyword.operator guifg=#666666")
+		vim.cmd("highlight @keyword.function guifg=#777777")
+		vim.cmd("highlight @keyword.return guifg=#777777")
 
 		vim.cmd("highlight @punctuation.bracket guifg=#555555")
 

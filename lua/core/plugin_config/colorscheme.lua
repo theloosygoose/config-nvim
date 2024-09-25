@@ -21,3 +21,10 @@ require('devicon-colorscheme').setup{
     },
 }
 --]]
+--
+
+require('lavish').setup({
+    style = {
+        italic_comments = true,
+    }
+})
