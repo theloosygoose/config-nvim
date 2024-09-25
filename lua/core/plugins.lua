@@ -198,11 +198,11 @@ require("lazy").setup({
 
 		vim.cmd("highlight @constructor guifg=#888888")
 
-		vim.cmd("highlight @operator guifg=#444444")
-		vim.cmd("highlight @comment guifg=#222222")
-		vim.cmd("highlight @string guifg=#444444")
+		vim.cmd("highlight @operator guifg=#555555")
+		vim.cmd("highlight @comment guifg=#333333")
+		vim.cmd("highlight @string guifg=#555555")
 
-		vim.cmd("highlight @keyword.coroutine guifg=#444444")
+		vim.cmd("highlight @keyword.coroutine guifg=#555555")
 
 		vim.cmd("highlight @function.builtin guifg=#999999")
 		vim.cmd("highlight @function.call guifg=#999999")
@@ -282,6 +282,5 @@ require("lazy").setup({
 
 		-- Devicons colors
 		vim.cmd("highlight DevIconDefault guifg=#555555")
-        end,
-    }
+        end, }
 })
