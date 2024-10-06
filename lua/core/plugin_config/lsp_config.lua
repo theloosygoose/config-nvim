@@ -6,7 +6,6 @@ require("mason-lspconfig").setup({
             "gopls",
             "svelte",
             "pyright",
-            "omnisharp_mono",
         },
 
         tools = {
@@ -44,14 +43,6 @@ require("lspconfig").lua_ls.setup {
 }
 
 -- LANGUAGE CONFIG START --
-
-lspconfig.omnisharp_mono.setup {
-
-    enable_ms_build_load_projects_on_demand = false,
-    enable_import_completion = true,
-}
-
-lspconfig.glsl_analyzer.setup { filetypes = { "frag", "glsl", "vert" } }
 
 lspconfig.gdscript.setup {
     single_file_support = false,
