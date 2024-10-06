@@ -112,7 +112,8 @@ require("lazy").setup({
     -- see git diff and things on right bar
     'lewis6991/gitsigns.nvim',
 
-    -- Language Specific Things
+    -- Language Specific Things --
+    -------
 
     -- C++ and other C lang stuff
     'p00f/clangd_extensions.nvim',
@@ -130,6 +131,12 @@ require("lazy").setup({
             "nvim-treesitter/nvim-treesitter",
             "nvim-tree/nvim-web-devicons"
         }
+    },
+
+    -- LaTeX
+    {
+        "lervag/vimtex",
+        lazy = false,
     },
 
     -- COMPLETION
