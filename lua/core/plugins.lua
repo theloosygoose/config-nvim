@@ -6,6 +6,10 @@ require("lazy").setup({
         priority = 1000
     },
 
+    {
+        'bettervim/yugen.nvim',
+        priority = 1000
+    },
 
     -- Basics -- 
     ------------

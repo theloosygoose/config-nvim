@@ -28,3 +28,7 @@ require('lavish').setup({
         italic_comments = true,
     }
 })
+
+require('yugen').setup({
+
+})

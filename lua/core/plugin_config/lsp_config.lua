@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
             "gopls",
             "svelte",
             "pyright",
+            "ltex"
         },
 
         tools = {
@@ -124,6 +125,11 @@ lspconfig.sqlls.setup{}
 
 -- Python
 lspconfig.pyright.setup{}
+
+-- LaTeX 
+lspconfig.ltex.setup{
+    filetypes = {"markdown", "tex"},
+}
 
 -- LANGUAGE CONFIG END --
 
