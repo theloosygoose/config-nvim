@@ -137,11 +137,20 @@ require("lazy").setup({
         }
     },
 
+    -- Plugins for Writing Prose --
+
     -- LaTeX
     {
         "lervag/vimtex",
         lazy = false,
     },
+
+    -- Zen Mode 
+    -- minimalist and zen mode type thing
+    {
+        "folke/zen-mode.nvim"
+    },
+
 
     -- COMPLETION
     "hrsh7th/nvim-cmp",
@@ -287,6 +296,12 @@ require("lazy").setup({
 		vim.cmd("highlight GitSignsAdd guifg=#9bcea5")
 		vim.cmd("highlight GitSignsChange guifg=#f0c674")
 		vim.cmd("highlight GitSignsDelete guifg=#ff8989")
+
+        -- Markview colors
+		vim.cmd("highlight MarkviewHeading1 guifg=#9bcea5")
+		vim.cmd("highlight MarkviewHeading2 guifg=#f0c674")
+		vim.cmd("highlight MarkviewHeading3 guifg=#ff8989")
+		vim.cmd("highlight MarkviewHeading4 guifg=#89B4FA")
 
 		-- Telescope colors
 		vim.cmd("highlight TelescopeBorder guibg=NONE guifg=#333333")
