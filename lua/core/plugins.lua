@@ -210,7 +210,7 @@ require("lazy").setup({
 		vim.cmd("highlight @constructor guifg=#888888")
 
 		vim.cmd("highlight @operator guifg=#555555")
-		vim.cmd("highlight @comment guifg=#333333")
+		vim.cmd("highlight @comment guifg=#222222")
 		vim.cmd("highlight @string guifg=#555555")
 
 		vim.cmd("highlight @keyword.coroutine guifg=#555555")
