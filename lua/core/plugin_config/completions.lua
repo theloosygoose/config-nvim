@@ -1,7 +1,5 @@
 local cmp = require("cmp")
 
--- require("luasnip.loaders.from_vscode").lazy_load()
-
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -34,3 +32,17 @@ cmp.setup({
     }
 
 })
+
+local ls = require('luasnip')
+
+vim.keymap.set({"i", "s"}, "<A-k>", function()
+    if ls.expand_or_jumpable() then
+        ls.expand_or_jump()
+    end
+end, { silent = true })
+
+vim.keymap.set({"i", "s"}, "<A-j>", function()
+    if ls.jumpable(-1) then
+        ls.jump(-1)
+    end
+end, { silent = true })
