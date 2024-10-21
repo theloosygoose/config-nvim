@@ -21,6 +21,14 @@ require("lazy").setup({
     -- Misc Nice things to have 
     { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
     { 'kylechui/nvim-surround', event = "VeryLazy" },
+    { "nvchad/showkeys", cmd = "ShowkeysToggle"},
+    {
+        "jake-stewart/force-cul.nvim",
+        config = function()
+            require("force-cul").setup()
+        end
+    },
+    { 'echasnovski/mini.notify', version = '*' },
 
 
     -- Treesitter
