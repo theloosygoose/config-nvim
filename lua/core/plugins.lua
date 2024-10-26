@@ -130,6 +130,10 @@ require("lazy").setup({
     -- C++ and other C lang stuff
     'p00f/clangd_extensions.nvim',
 
+    --
+    -- MARKDOWN --
+    --
+
     -- Markdown Fancy View
     {
         "OXY2DEV/markview.nvim",
@@ -144,7 +148,6 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons"
         }
     },
-
     -- Plugins for Writing Prose --
 
     -- LaTeX
