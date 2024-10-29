@@ -10,6 +10,11 @@ require("lazy").setup({
         'bettervim/yugen.nvim',
         priority = 1000
     },
+    {
+        'slugbyte/lackluster.nvim',
+        lazy = false,
+        priority = 1000
+    },
 
     -- Basics -- 
     ------------
