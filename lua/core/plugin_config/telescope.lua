@@ -28,7 +28,7 @@ layout_strategies.vertical_fused = function(picker, max_columns, max_lines, layo
 end
 
 telescope.setup({
-    file_ignore_patterns = { "node%_modules/.*", ".godot/."},
+    file_ignore_patterns = { "node%_modules/.*", ".godot/.", "torch-venv/.*"},
 
     defaults = {
         initial_mode = "insert",
@@ -63,7 +63,7 @@ telescope.setup({
                 hijack_netrw = false,
                 hidden = true,
                 initial_mode = "normal",
-                use_fd = false,
+                use_fd = true,
                 respect_gitignore = true,
         },
     },

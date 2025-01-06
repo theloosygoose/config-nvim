@@ -1,18 +1,9 @@
 require("mason-lspconfig").setup({
     ensure_installed = {
-        lsp = {
-            "lua_ls",
-            "clangd",
-            "gopls",
-            "svelte",
-            "pyright",
-            "ltex"
-        },
-
-        tools = {
-            "gdtoolkit",
-            "csharpier",
-        }
+        "lua_ls",
+        "clangd",
+        "gopls",
+        "ltex"
     }
 })
 
@@ -57,8 +48,6 @@ lspconfig.gdscript.setup {
 }
 
 lspconfig.clangd.setup {}
-
-lspconfig.zls.setup{}
 
 lspconfig.gopls.setup {
     settings = {
@@ -126,7 +115,7 @@ lspconfig.svelte.setup{}
 lspconfig.sqlls.setup{}
 
 -- Python
-lspconfig.pyright.setup{}
+lspconfig.basedpyright.setup{}
 
 -- LaTeX 
 lspconfig.ltex.setup{
