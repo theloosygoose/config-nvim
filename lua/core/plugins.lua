@@ -362,6 +362,8 @@ require("lazy").setup({
                 DiagnosticSignWarn = { fg = Palette.yellow },
                 DiagnosticSignInfo = { fg = Palette.blue },
                 DiagnosticSignHint = { fg = Palette.green },
+
+                MarviewHeading1 = { bg = "#181818", fg = Palette.noir_3}
             }
 
             -- apply highlights
