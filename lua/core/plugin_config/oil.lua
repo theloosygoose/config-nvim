@@ -19,7 +19,7 @@ oil.setup {
             winblend = 0,
         },
 
-        preview_split = "above",
+        preview_split = "below",
         -- This is the config that will be passed to nvim_open_win.
         -- Change values here to customize the layout
         override = function(conf)
@@ -38,10 +38,10 @@ oil.setup {
         end,
     },
     preview = {
-        max_width = 0.9,
+        max_width = 1.0,
         min_width = { 40, 0.4 },
         width = nil,
-        max_height = 0.9,
+        max_height = 1.0,
         min_height = { 5, 0.1 },
         height = nil,
 
