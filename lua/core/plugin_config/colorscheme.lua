@@ -4,7 +4,7 @@ require('lavish').setup({
     }
 })
 
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 vim.o.background = "dark"
 
 vim.cmd.colorscheme "zenwritten"
