@@ -37,7 +37,6 @@ vim.opt.timeoutlen = 300
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.scrolloff = 10
 
-vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
 vim.opt.fillchars:append({
