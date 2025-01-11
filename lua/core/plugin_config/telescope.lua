@@ -28,7 +28,7 @@ layout_strategies.vertical_fused = function(picker, max_columns, max_lines, layo
 end
 
 telescope.setup({
-    file_ignore_patterns = {".godot/.", "torch-venv"},
+    file_ignore_patterns = {".godot/", "torch-venv"},
 
     defaults = {
         initial_mode = "insert",
