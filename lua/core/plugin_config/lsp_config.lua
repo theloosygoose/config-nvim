@@ -3,6 +3,8 @@ require("mason-lspconfig").setup({
         "lua_ls",
         "clangd",
         "gopls",
+        "rust-analyzer",
+        "pyright",
         "ltex"
     }
 })
@@ -115,7 +117,7 @@ lspconfig.svelte.setup{}
 lspconfig.sqlls.setup{}
 
 -- Python
-lspconfig.basedpyright.setup{}
+lspconfig.pyright.setup{}
 
 -- LaTeX 
 lspconfig.ltex.setup{
